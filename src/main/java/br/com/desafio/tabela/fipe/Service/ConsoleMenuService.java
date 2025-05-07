@@ -37,7 +37,7 @@ public class ConsoleMenuService {
             switch (menu) {
                 case 1:
                     fipeApplication.consultarFipe("carros");
-                    menu = 0; // <-- Força sair depois
+                    menu = 0;
                     break;
                 case 2:
                     fipeApplication.consultarFipe("motos");

@@ -101,18 +101,18 @@ public class FipeApplication {
 
             ValueFipeModel veiculo = mapper.readValue(jsonValor, ValueFipeModel.class);
 
-            System.out.println("+---------------------------+");
+            System.out.println("-----------------------------");
             System.out.println("Modelo: " + veiculo.Modelo());
             System.out.println("Valor: " + veiculo.Valor());
             System.out.println("Ano: " + veiculo.AnoModelo());
             System.out.println("Combustível: " + veiculo.Combustivel());
-            System.out.println("+---------------------------+");
+            System.out.println("-----------------------------");
 
         } catch (Exception e) {
-            throw new RuntimeException("Erro ao processar JSON", e);
+            throw new RuntimeException("Erro ao processar p JSON", e);
         } finally {
             scanner.close();
-            System.out.println("Api precessada corretamente, Finalizando Aplicação...");
+            System.out.println("Api processada corretamente, Finalizando Aplicação...");
         }
     }
 }
