@@ -1,6 +1,7 @@
 package br.com.desafio.tabela.fipe.Service;
 
 import br.com.desafio.tabela.fipe.App.FipeApplication;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class ConsoleMenuService {
         this.fipeApplication = fipeApplication;
     }
 
-    public void exibirMenu() {
+    public void exibirMenu() throws JsonProcessingException {
         Scanner scanner = new Scanner(System.in);
         int menu;
 
@@ -35,11 +36,11 @@ public class ConsoleMenuService {
 
             switch (menu) {
                 case 1:
-                    fipeApplication.consultarFipe("carro");
+                    fipeApplication.consultarFipe("carros");
                     menu = 0; // <-- Força sair depois
                     break;
                 case 2:
-                    fipeApplication.consultarFipe("moto");
+                    fipeApplication.consultarFipe("motos");
                     menu = 0;
                     break;
                 case 3:
